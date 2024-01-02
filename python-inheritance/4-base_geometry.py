@@ -1,15 +1,15 @@
-#!/usr/bin/python3
-""" this module contains class BaseGeometry """
+"""
+This module contains an empty class
+"""
 
+class meta_class:
+    """This is the meta class"""
+    
+    def __dir__(cls):
+        return [attribute for  attribute in super().__dir__() if attribute != "__init_subclass__"]
 
-class BaseGeometry:
-    """ defines the class BaseGeometry """
-
+class BaseGeometry(meta_class):
+    
+    """This is a geometry class"""
     def area(self):
-        """
-        Calculate the area.
-
-        Raises:
-            Exception: This method is not implemented in the base class.
-        """
-        raise Exception("area() is not implemented")
+        raise Exception ("area() is not implemented")
